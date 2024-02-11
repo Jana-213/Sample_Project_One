@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -31,10 +33,14 @@ public class BaseClass{
 	
 	protected WebDriverWait wait;
 	
+	public static Logger logger;
+	
 	@BeforeClass
 	public void setUp() throws Exception {
 		
 		loadProperties();
+		
+		logger = LogManager.getLogger(this.getClass());
 		
 //		System.out.println(getURL());
 //		
@@ -48,11 +54,16 @@ public class BaseClass{
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		
+		logger.info("*** Session Started ***");
+		
 	}
 	
 	@AfterClass
 	public void tearDown() {
+		
 		driver.quit();
+		
+		logger.info("*** Session Ended ***");
 	}
 	
 public void loadProperties() throws Exception {

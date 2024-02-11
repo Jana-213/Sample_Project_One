@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-10T13:38:03 IST" name="EndToEndSuite" finished-at="2024-02-10T13:38:08 IST" duration-ms="5345">
+  <suite started-at="2024-02-11T19:11:28 IST" name="EndToEndSuite" finished-at="2024-02-11T19:11:33 IST" duration-ms="4679">
     <groups>
     </groups>
-    <test started-at="2024-02-10T13:38:03 IST" name="EndToEndTest" finished-at="2024-02-10T13:38:08 IST" duration-ms="5345">
+    <test started-at="2024-02-11T19:11:28 IST" name="EndToEndTest" finished-at="2024-02-11T19:11:33 IST" duration-ms="4679">
       <class name="com.project1.testcases.EndToEndTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.project1.testcases.EndToEndTest@747ddf94]" started-at="2024-02-10T13:38:03 IST" name="setUp" finished-at="2024-02-10T13:38:06 IST" duration-ms="2785" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.project1.testcases.EndToEndTest@3c19aaa5]" started-at="2024-02-11T19:11:28 IST" name="setUp" finished-at="2024-02-11T19:11:31 IST" duration-ms="2683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="e2e()[pri:0, instance:com.project1.testcases.EndToEndTest@747ddf94]" started-at="2024-02-10T13:38:06 IST" name="e2e" finished-at="2024-02-10T13:38:08 IST" duration-ms="2300" status="PASS">
+        <test-method signature="e2e()[pri:0, instance:com.project1.testcases.EndToEndTest@3c19aaa5]" started-at="2024-02-11T19:11:31 IST" name="e2e" finished-at="2024-02-11T19:11:33 IST" duration-ms="1847" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- e2e -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.project1.testcases.EndToEndTest@747ddf94]" started-at="2024-02-10T13:38:08 IST" name="tearDown" finished-at="2024-02-10T13:38:08 IST" duration-ms="198" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.project1.testcases.EndToEndTest@3c19aaa5]" started-at="2024-02-11T19:11:33 IST" name="tearDown" finished-at="2024-02-11T19:11:33 IST" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

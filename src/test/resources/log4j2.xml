@@ -1,1 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Configuration status = "WARN">
+	
+	<Properties>
+		<Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss} [%t] %c{1} - %msg%n </Property>
+		
+		<!-- 
+		%d{yyyy-MM-dd HH:mm:ss} [%t] %c{1} - %msg%n 
+		2024-02-10 21:36:29 [main] EndToEndTest - Session Started    
+		-->
+		
+		<!-- 
+		%d{HH:mm:ss.SSS}[%t] %-5level %logger{36} - %msg%n		
+		21:35:21.787[main] INFO  com.project1.testcases.EndToEndTest - Session Started
+		-->
+		
+		<property name = "basePath">./logs</property>
+	</Properties>
+	
+	<Appenders>
+		
+		<Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        
+        <RollingFile name = "File" filename = "${basePath}/automation.log" filePattern = "${basePath}/automation-%d{yyyy-MM-dd}-%i.log">
+        <PatternLayout pattern="${LOG_PATTERN}"/>
+        <SizeBasedTriggeringPolicy size = "50000"/>
+        </RollingFile>
+		
+	</Appenders>
+	
+	<Loggers>
+		
+		<Root level = "Info">
+			<AppenderRef ref = "Console"/>
+			
+			<AppenderRef ref = "File"/>
+			
+		</Root>
+	</Loggers>
+		
+</Configuration>
